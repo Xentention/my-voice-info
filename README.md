@@ -1,5 +1,7 @@
 # About My Voice
 
+**Read in:** [English](README.md) · [Русский](README.ru.md) — **See also:** [Architecture](architecture.md)
+
 My Voice is a free communication app for people who find spoken language difficult.
 It works the way many other AAC apps work — select tiles, build a sentence,
 let the device voice it -- with a few things that set it apart.

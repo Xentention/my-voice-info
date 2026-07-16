@@ -1,5 +1,7 @@
 # My Voice — Architecture
 
+**See also:** [About My Voice](README.md) · [О "Мой Голос" (Русский)](README.ru.md)
+
 Last revised on 2026.06.22
 
 ## Contents
