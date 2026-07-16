@@ -1,6 +1,13 @@
 # About My Voice
 
-**Read in:** [English](README.md) · [Русский](README.ru.md) — **See also:** [Architecture](architecture.md)
+<p align="center">
+  <a href="https://Xentention.github.io/my-voice-info/">
+<img alt="My Voice Website" src="https://img.shields.io/badge/My_Voice-landing?style=for-the-badge&label=Visit%20Our%20Website&labelColor=%23FFFFFF&color=920000">
+  </a>
+</p>
+
+- [Читать на русском](README.md)
+- [Architecture](architecture.md)
 
 My Voice is a free communication app for people who find spoken language difficult.
 It works the way many other AAC apps work — select tiles, build a sentence,

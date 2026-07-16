@@ -1,6 +1,13 @@
 # О "Мой Голос"
 
-**Язык:** [English](README.md) · [Русский](README.ru.md) — **См. также:** [Архитектура](architecture.md)
+<p align="center">
+  <a href="https://Xentention.github.io/my-voice-info/ru/">
+<img alt="Сайт Мой Голос" src="https://img.shields.io/badge/Мой голос-landing?style=for-the-badge&label=Перейти%20на%20сайт&labelColor=%23FFFFFF&color=920000">
+  </a>
+</p>
+
+- [Read In English](README.md)
+- [Описание архитектуры](architecture.md)
 
 Мой Голос -- бесплатное приложение Альтернативной и Дополнительной Коммуникации, предназначенное для людей с нарушениями устной речи.
 Оно работает так же, как многие другие АДК-приложения: нужно выбрать слова, составить предложение и дать устройству его озвучить — но с несколькими отличиями.
