@@ -1,0 +1,25 @@
+{
+  "name": "my-voice-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bilingual (EN/RU) landing page for the My Voice AAC project.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mdi/font": "^7.4.47",
+    "framer-motion": "^11.0.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
