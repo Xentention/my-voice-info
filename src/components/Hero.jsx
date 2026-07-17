@@ -12,7 +12,7 @@ import {
 import { useLang } from "../LangContext";
 import { resolveHref } from "../links";
 import { MaterialIcons } from "./icons";
-import { BoardFrame } from "./primitives";
+import { BoardFrame, Accent } from "./primitives";
 
 export function Hero() {
   const { c, cfg } = useLang();
@@ -44,16 +44,31 @@ export function Hero() {
               id="hero-title"
               className="mv-rise"
               fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}
-              mb={6}
+              mb={2}
               style={{ animationDelay: "0.05s" }}
             >
               {h.title}
             </Heading>
+            <Accent />
+            <Text
+              className="mv-rise"
+              textTransform="uppercase"
+              letterSpacing="0.14em"
+              fontSize="xs"
+              fontWeight={800}
+              color="brand.600"
+              mt={-3}
+              mb={{ base: 5, md: 6 }}
+              style={{ animationDelay: "0s" }}
+            >
+              {h.releaseNote}
+            </Text>
             <Text
               className="mv-rise"
               fontSize={{ base: "lg", md: "xl" }}
               color="muted"
               maxW="md"
+              mb={{ base: 5, md: 6 }}
               lineHeight={1.6}
               style={{ animationDelay: "0.1s" }}
             >
@@ -106,6 +121,9 @@ export function Hero() {
             mx="auto"
           >
             <BoardFrame eager />
+            <Text fontSize="xs" color="muted" textAlign="center" mt={3}>
+              {h.prototypeNote}
+            </Text>
           </Box>
         </Grid>
       </Container>

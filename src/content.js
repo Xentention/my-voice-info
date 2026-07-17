@@ -80,6 +80,8 @@ export const MV_CONTENT = {
         'space for personalization. ',
       ctaPrimary:   { label: 'Help us improve',    href: '#research' },
       ctaSecondary: { label: 'Learn more',  href: 'github' },
+      prototypeNote: 'This is an interface prototype. Final product may differ',
+      releaseNote: 'Estimated 2027',
     },
 
     landscape: {
@@ -271,8 +273,10 @@ export const MV_CONTENT = {
         'приложение для тех, кому трудно даётся устная речь. Оно сразу даёт ' +
         'богатый словарь «из коробки» и при этом оставляет простор, чтобы ' +
         'настроить его под свои нужды.',
-      ctaPrimary:   { label: 'Помочь проекту', href: '#research' },
+      ctaPrimary:   { label: 'Принять участие', href: '#research' },
       ctaSecondary: { label: 'Узнать больше',            href: 'github' },
+      prototypeNote: 'Прототип интерфейса. Финальный продукт может отличаться',
+      releaseNote: 'Ожидается в 2027',
     },
 
     landscape: {
