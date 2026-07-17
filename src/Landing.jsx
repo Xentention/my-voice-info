@@ -1,6 +1,7 @@
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import theme from "./theme";
 import { LangProvider } from "./LangContext";
+import { A11yProvider } from "./A11yContext";
 import { SkipLink } from "./components/primitives";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
@@ -15,17 +16,19 @@ export default function Landing({ lang }) {
   return (
     <ChakraProvider theme={theme}>
       <LangProvider lang={lang}>
-        <SkipLink />
-        <Header />
-        <Box as="main" id="main">
-          <Hero />
-          <PromoCard />
-          <Landscape />
-          <GrammarStages />
-          <Capabilities />
-          <Research />
-        </Box>
-        <Footer />
+        <A11yProvider>
+          <SkipLink />
+          <Header />
+          <Box as="main" id="main">
+            <Hero />
+            <PromoCard />
+            <Landscape />
+            <GrammarStages />
+            <Capabilities />
+            <Research />
+          </Box>
+          <Footer />
+        </A11yProvider>
       </LangProvider>
     </ChakraProvider>
   );

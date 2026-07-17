@@ -84,6 +84,7 @@ export function InflectionExample({ g, ...rest }) {
               >
                 {
                   <Flex
+                    className="mv-hc-badge"
                     align="center"
                     justify="center"
                     w="fit-content"
@@ -97,11 +98,7 @@ export function InflectionExample({ g, ...rest }) {
                     lineHeight={1}
                     gap={1.5}
                   >
-                    <MaterialIcons
-                      name="clock-outline"
-                      color="white"
-                      fontSize={20}
-                    />
+                    <MaterialIcons name="clock-outline" fontSize={20} />
                     <Text as="span">{g.tenseInfo}</Text>
                   </Flex>
                 }

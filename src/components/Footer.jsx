@@ -24,6 +24,7 @@ export function Footer() {
     <Box
       as="footer"
       id="contact"
+      className="mv-hc-surface"
       bg="ink"
       color="paper.100"
       pt={{ base: 16, md: 20 }}

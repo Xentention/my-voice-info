@@ -22,7 +22,6 @@ export function Capabilities() {
     <Card
       key="f"
       feature
-      interactive
       display="flex"
       flexDirection="column"
       h={{ lg: "100%" }}
@@ -34,15 +33,10 @@ export function Capabilities() {
       gridRow={{ lg: "1 / span 2" }}
     >
       <Accent />
-      <CardHeading feature mb={{ base: 3, md: 4 }}>
+      <CardHeading feature mb={{ base: 2.5, md: 3.5 }}>
         {feature.title}
       </CardHeading>
-      <Text
-        color="muted"
-        lineHeight={1.7}
-        fontSize={{ base: "md", md: "lg" }}
-        mb={6}
-      >
+      <Text color="muted" lineHeight={1.7} fontSize="lg" mb={6}>
         {feature.body}
       </Text>
       <Box flex={1} minH={2} />
@@ -59,7 +53,6 @@ export function Capabilities() {
       return (
         <Card
           key={i}
-          interactive
           display="flex"
           flexDirection="column"
           h={{ lg: "100%" }}
@@ -80,8 +73,8 @@ export function Capabilities() {
   );
 
   return (
-    <Section id={cap.id}>
-      <SectionHead title={cap.title} />
+    <Section id={cap.id} aria-labelledby={`${cap.id}-title`}>
+      <SectionHead title={cap.title} titleId={`${cap.id}-title`} />
       {/* base: horizontal-scroll carousel (one card per screen). lg: bento. */}
       <InflectionExample
         g={g}

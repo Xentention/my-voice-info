@@ -21,7 +21,7 @@ export function ArasaacCredit({ ...rest }) {
     >
       <Box
         as="img"
-        src="https://static.arasaac.org/pictograms/35071/35071_500.png"
+        src={`${import.meta.env.BASE_URL}assets/pictograms/35071.png`}
         alt="ARASAAC"
         w="30px"
         h="30px"

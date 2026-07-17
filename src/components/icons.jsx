@@ -93,6 +93,37 @@ export function FlagIcon({ code, size = 24 }) {
   );
 }
 
+export function ContrastIcon({ on = false, ...props }) {
+  const iconSize = `calc(${props.size} * 0.8)`;
+  return (
+    <Box
+      className="mv-hc-mark"
+      w={props.size}
+      h={props.size}
+      borderRadius="lg"
+      display="grid"
+      placeItems="center"
+      flexShrink={0}
+    >
+      {on ? (
+        <MaterialIcons
+          name="eye-off"
+          fill="currentColor"
+          fontSize={iconSize}
+          aria-hidden="true"
+        />
+      ) : (
+        <MaterialIcons
+          name="eye"
+          fill="currentColor"
+          fontSize={iconSize}
+          aria-hidden="true"
+        />
+      )}
+    </Box>
+  );
+}
+
 export function Logo({
   size,
   markBg = "brand.500",
@@ -103,6 +134,7 @@ export function Logo({
 
   return (
     <Box
+      className="mv-hc-mark"
       w={size}
       h={size}
       borderRadius="lg"

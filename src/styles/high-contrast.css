@@ -1,0 +1,82 @@
+:root {
+  --hc-bg: #ffffff;
+  --hc-fg: #000000;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid #920000;
+  outline-offset: 2px;
+}
+
+/************** High-contrast mode **************/
+html[data-hc="on"],
+html[data-hc="on"] body,
+html[data-hc="on"] #root {
+  background: var(--hc-bg) !important;
+}
+
+/* setting borders and text to black */
+html[data-hc="on"] #root :where(*):not(svg):not(svg *) {
+  color: var(--hc-fg) !important;
+  border-color: var(--hc-fg) !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Dark colors invert to white */
+html[data-hc="on"] .mv-hc-surface {
+  background: var(--hc-bg) !important;
+  border-color: var(--hc-fg) !important;
+}
+
+html[data-hc="on"] .mv-hc-card,
+html[data-hc="on"] .mv-hc-panel,
+html[data-hc="on"] .mv-hc-badge,
+html[data-hc="on"] .mv-hc-frame {
+  background: var(--hc-bg) !important;
+  border: 2px solid var(--hc-fg) !important;
+}
+
+/* Buttons: bordered black on white, inverting on hover/focus */
+html[data-hc="on"] #root .chakra-button {
+  background: var(--hc-bg) !important;
+  color: var(--hc-fg) !important;
+  border: 2px solid var(--hc-fg) !important;
+  box-shadow: none !important;
+}
+html[data-hc="on"] #root .chakra-button:hover,
+html[data-hc="on"] #root .chakra-button:focus-visible {
+  background: var(--hc-fg) !important;
+}
+html[data-hc="on"] #root .chakra-button:hover,
+html[data-hc="on"] #root .chakra-button:hover *,
+html[data-hc="on"] #root .chakra-button:focus-visible,
+html[data-hc="on"] #root .chakra-button:focus-visible * {
+  color: var(--hc-bg) !important;
+}
+
+/* Brand mark: invert to a black square with a white icon (the force rule above
+   blacks the glyph but leaves the red background, which would read ~2:1). */
+html[data-hc="on"] #root .mv-hc-mark {
+  background: var(--hc-fg) !important;
+}
+html[data-hc="on"] #root .mv-hc-mark,
+html[data-hc="on"] #root .mv-hc-mark * {
+  color: var(--hc-bg) !important;
+}
+
+/* Underline links for non-colour distinction, but not button-styled links. */
+html[data-hc="on"] a:not(.chakra-button) { text-decoration: underline !important; }
+
+html[data-hc="on"] :focus-visible {
+  outline: 3px solid var(--hc-fg) !important;
+  outline-offset: 2px;
+}

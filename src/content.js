@@ -23,7 +23,37 @@ export const MV_CONTENT = {
   en: {
     lang: 'en',
     brand: 'My Voice',
-    flag: 'us',         
+    flag: 'us',
+
+    a11y: {
+      contrastLabel:  'High contrast',
+      contrastOn:     'High contrast on',
+      contrastOff:    'High contrast off',
+      boardPreviewLabel: 'My Voice app interface preview',
+      boardPreviewAlt:
+        'Preview of the My Voice app interface, shown on a tablet.\n\n' +
+
+        'Two stacked utterance bars sit above the board. ' +
+        'The upper bar holds the raw pictogram input, ' +
+        'and the lower bar shows the same selection as a grammatically auto-inflected sentence. ' +
+        'The user can speak either the raw words or the finished sentence. Surrounding controls ' +
+        'include a voice emotion selector, a backspace to clear the last tile, a trash button ' +
+        'to empty the whole utterance, an edit button, a tense selector, ' +
+        'and a "more actions" dropdown menu, intended for actions like "hold that thought".\n\n' +
+
+        'The board is a 6 rows by 10 columns grid that mixes tiles of several sizes and subtypes, ' +
+        'each illustrated with an ARASAAC pictogram:\n' +
+        'Displayed types of tiles are word tiles (single vocabulary items), ' +
+        'chunks (reusable sentence fragments), phrases (voiced immediately), ' +
+        'popup tiles (open an overlay of related words), and folders (navigate to other boards). ' +
+        'Tiles are colour-coded in the modified Fitzgerald-key tradition, the overall style is ' +
+        'in warm pastels\n\n' +
+
+        'Navigation Rail on the right is a vertical strip of utility buttons: menu, ' +
+        'home, search, emergency board, return, alert/attention bell, keyboard, and a whiteboard.\n' +
+        'Above them is a status area showing battery level and the current time and date.',
+      goToCard:       'Go to card',
+    },
 
     meta: {
       title: 'My Voice',
@@ -177,6 +207,36 @@ export const MV_CONTENT = {
     brand: 'Мой голос',
     flag: 'ru',
 
+    a11y: {
+      contrastLabel:  'Высокий контраст',
+      contrastOn:     'Высокий контраст включён',
+      contrastOff:    'Высокий контраст выключен',
+      boardPreviewLabel: 'Предпросмотр интерфейса приложения «Мой голос»',
+      boardPreviewAlt:
+        'Предпросмотр интерфейса приложения «Мой голос»:\n\n' +
+
+        'Над доской расположены две строки высказывания. ' +
+        'Верхняя строка содержит необработанный ввод, а нижняя показывает тот же набор как ' +
+        'автоматически согласованное предложение. Пользователь может озвучить любой из вариантов. ' +
+        'Рядом расположены элементы управления: изменения эмоции, стирания последней плитки, ' +
+        'очистки всего высказывания, редактирования, выбора глагольного времени ' +
+        'и выпадающее меню «больше», открывающее дополнительные действия.\n\n' +
+
+        'Доска представляет собой сетку из 6 строк и 10 столбцов, в которой сочетаются плитки разных ' +
+        'размеров и подтипов, каждая проиллюстрирована пиктограммой ARASAAC:\n' +
+        'показаны такие типы плиток: слова (единичные), ' +
+        'фрагменты или чанки (переиспользуемые части предложения), фразы (озвучиваются сразу), ' +
+        'поп апы (раскрывают связанные слова) и папки (переход к другим доскам). ' +
+        'Плитки имеют цветовую кодировку по модифицированной системе Фицджеральда; общий стиль приложения ' +
+        'в тёплых пастельных тонах.\n\n' +
+
+        'Справа находится панель навигации: на ней расположены кнопки меню, ' +
+        'домой, поиск, экстренная доска, возврат, колокольчик для привлечения внимания, клавиатура ' +
+        'и доска для рисования.\n' +
+        'Над ними расположены элементы, показывающие уровень заряда батареи и текущее время и дату.',
+      goToCard:       'Перейти к карточке',
+    },
+
     meta: {
       title: 'Мой голос',
       description:
@@ -186,7 +246,7 @@ export const MV_CONTENT = {
 
     promo: {
       badge: 'Может быть интересно',
-      text:  'Инструмент исправления грамматики для Windows, совместимый с Communicator 5 и другими системами',
+      text:  'Инструмент исправления грамматики для Windows, совместимый с Communicator 5 и другими системами (Beta)',
       cta:   'Перейти',
       href:  'windows',
     },

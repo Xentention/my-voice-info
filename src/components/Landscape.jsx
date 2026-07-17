@@ -9,14 +9,17 @@ import {
   CardHeading,
 } from "./primitives";
 
-/* "Why another AAC app?" — acknowledge the field, then name the gaps. */
 export function Landscape() {
   const { c } = useLang();
   const ls = c.landscape;
   if (!ls) return null;
   return (
-    <Section id={ls.id}>
-      <SectionHead title={ls.title} intro={ls.intro} />
+    <Section id={ls.id} aria-labelledby={`${ls.id}-title`}>
+      <SectionHead
+        title={ls.title}
+        intro={ls.intro}
+        titleId={`${ls.id}-title`}
+      />
       {/* gaps — swipeable on mobile only; a two-column grid from tablet up */}
       <CardRail gridFrom="md" gridTemplateColumns={{ md: "repeat(2, 1fr)" }}>
         {ls.gaps.map((gp, i) => {

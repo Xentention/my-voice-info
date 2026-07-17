@@ -8,14 +8,23 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { useLang } from "../LangContext";
+import { useA11y } from "../A11yContext";
 import { resolveHref } from "../links";
-import { MaterialSymbol, Logo, MaterialIcons, FlagIcon } from "./icons";
+import {
+  MaterialSymbol,
+  Logo,
+  MaterialIcons,
+  FlagIcon,
+  ContrastIcon,
+} from "./icons";
 
 export function Header() {
   const { lang, c, cfg } = useLang();
+  const { highContrast, toggleHighContrast } = useA11y();
   return (
     <Box
       as="header"
+      className="mv-hc-surface"
       position="sticky"
       top={0}
       zIndex={1000}
@@ -80,16 +89,40 @@ export function Header() {
 
           {/* actions */}
           <HStack spacing={{ base: 2, md: 2.5 }}>
+            {/* high-contrast toggle */}
+            <Box
+              as="button"
+              type="button"
+              onClick={toggleHighContrast}
+              aria-pressed={highContrast}
+              aria-label={c.a11y.contrastLabel}
+              title={c.a11y.contrastLabel}
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              w="44px"
+              h="44px"
+              borderRadius="full"
+              color="white"
+              bg="transparent"
+              border="none"
+              cursor="pointer"
+              flexShrink={0}
+              _hover={{ bg: "whiteAlpha.200" }}
+            >
+              <ContrastIcon on={highContrast} size="44px" />
+            </Box>
             {/* round flag language toggle */}
             <Link
               href={c.nav.langHref}
               aria-label={c.nav.langLabel}
               hrefLang={lang === "ru" ? "en" : "ru"}
+              lang={lang === "ru" ? "en" : "ru"}
               display="inline-flex"
               alignItems="center"
               justifyContent="center"
-              w={9}
-              h={9}
+              w="44px"
+              h="44px"
               borderRadius="full"
               overflow="hidden"
               flexShrink={0}
@@ -103,8 +136,8 @@ export function Header() {
               display="inline-flex"
               alignItems="center"
               justifyContent="center"
-              w={9}
-              h={9}
+              w="44px"
+              h="44px"
               borderRadius="full"
               color="white"
               flexShrink={0}
@@ -118,7 +151,7 @@ export function Header() {
               size="sm"
               variant="solid"
               w="150px"
-              h={9}
+              h="44px"
               display={{ base: "none", sm: "inline-flex" }}
             >
               {<MaterialIcons name="email" color="white" fontSize={20} />}

@@ -9,14 +9,12 @@ import {
   CardHeading,
 } from "./primitives";
 
-/* How grammar is handled: the three-stage pipeline (Build · Inflect · Refine).
-   The worked "tap → spoken sentence" example lives in the Capabilities feature card. */
 export function GrammarStages() {
   const { c } = useLang();
   const g = c.grammar;
   return (
-    <Section id={g.id}>
-      <SectionHead title={g.title} intro={g.intro} />
+    <Section id={g.id} aria-labelledby={`${g.id}-title`}>
+      <SectionHead title={g.title} intro={g.intro} titleId={`${g.id}-title`} />
 
       {/* three stages — swipeable on mobile, an equal three-column grid on desktop */}
       <CardRail gridTemplateColumns={{ lg: "repeat(3, 1fr)" }}>

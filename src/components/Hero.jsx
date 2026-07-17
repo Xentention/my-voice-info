@@ -20,6 +20,7 @@ export function Hero() {
   return (
     <Box
       as="section"
+      aria-labelledby="hero-title"
       position="relative"
       overflow="hidden"
       pt={{ base: 14, md: 20 }}
@@ -40,6 +41,7 @@ export function Hero() {
           <VStack align="flex-start" spacing={0} textAlign="left">
             <Heading
               as="h1"
+              id="hero-title"
               className="mv-rise"
               fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}
               mb={6}
@@ -97,7 +99,6 @@ export function Hero() {
             </Stack>
           </VStack>
 
-          {/* live board */}
           <Box
             className="mv-rise"
             style={{ animationDelay: "0.12s" }}

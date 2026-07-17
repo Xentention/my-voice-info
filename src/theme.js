@@ -9,7 +9,7 @@ const theme = extendTheme({
   colors: {
     paper:  { 50: '#FCFBF7', 100: '#F5F2EA', 200: '#ECE7DB', 300: '#DFD8C8' },
     ink:    '#101319',    // cold, dark near-black accent
-    muted:  '#6F6656',
+    muted:  '#564F3F',
     hair:   '#E7E0D2',
     brand: {
       50:  '#FFF2F2', 100: '#FEDADA', 200: '#FF9090', 300: '#FF5757',
@@ -52,7 +52,12 @@ const theme = extendTheme({
   components: {
     Heading: { baseStyle: { fontWeight: 600, letterSpacing: '-0.005em', lineHeight: 1.16 } },
     Button: {
-      baseStyle: { fontWeight: 700, borderRadius: 'xl', transition: 'all 0.2s ease' },
+      baseStyle: {
+        fontWeight: 700,
+        borderRadius: 'xl',
+        transition: 'all 0.2s ease',
+        _focusVisible: { outline: '3px solid', outlineColor: 'brand.700', outlineOffset: '2px', boxShadow: 'none' },
+      },
       variants: {
         solid: {
           bg: 'brand.500', color: 'white',

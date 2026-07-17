@@ -1,4 +1,4 @@
-import { Children, useRef, useState } from "react";
+import { Children, useId, useRef, useState } from "react";
 import {
   Box,
   Container,
@@ -36,8 +36,6 @@ export function SkipLink() {
   );
 }
 
-/* Standard section shell: consistent vertical rhythm + container width for every
-   content section. Hero / Header / PromoCard pass maxW="7xl" for the wider band. */
 export function Section({
   id,
   maxW = "6xl",
@@ -58,11 +56,13 @@ export function Card({
   feature = false,
   interactive = false,
   muted = false,
+  className,
   children,
   ...rest
 }) {
   return (
     <Box
+      className={["mv-hc-card", className].filter(Boolean).join(" ")}
       bg={muted ? "paper.100" : "white"}
       border="1px solid"
       borderColor="hair"
@@ -92,6 +92,7 @@ export function CardRail({
   gridTemplateRows,
   gridFrom = "lg",
 }) {
+  const { c } = useLang();
   const railRef = useRef(null);
   const [active, setActive] = useState(0);
   const count = Children.count(children);
@@ -150,24 +151,35 @@ export function CardRail({
         <HStack
           display={{ base: "flex", [gridFrom]: "none" }}
           justify="center"
-          spacing={2}
+          spacing={1}
           mt={6}
         >
           {Array.from({ length: count }, (_, i) => (
             <Box
               key={i}
               as="button"
-              aria-label={`Card ${i + 1}`}
+              type="button"
+              aria-label={`${c.a11y.goToCard} ${i + 1}`}
+              aria-current={i === active ? "true" : undefined}
               onClick={() => goTo(i)}
-              h="8px"
-              w={i === active ? "22px" : "8px"}
-              borderRadius="full"
-              bg={i === active ? "brand.500" : "hair"}
-              transition="all 0.25s ease"
+              minW="44px"
+              h="44px"
+              display="grid"
+              placeItems="center"
+              bg="transparent"
               border="none"
               cursor="pointer"
               p={0}
-            />
+            >
+              <Box
+                h="8px"
+                w={i === active ? "22px" : "8px"}
+                borderRadius="full"
+                bg={i === active ? "brand.500" : "hair"}
+                transition="all 0.25s ease"
+                pointerEvents="none"
+              />
+            </Box>
           ))}
         </HStack>
       )}
@@ -178,11 +190,12 @@ export function CardRail({
 export function StepBadge({ children }) {
   return (
     <Box
+      className="mv-hc-badge"
       w={9}
       h={9}
       borderRadius="lg"
       bg="brand.50"
-      color="brand.600"
+      color="brand.700"
       border="1px solid"
       borderColor="brand.100"
       display="grid"
@@ -201,7 +214,7 @@ export function CardHeading({ feature = false, mb, children, ...rest }) {
       as="h3"
       mb={mb}
       minW={0}
-      fontSize={feature ? { base: "xl", md: "3xl" } : { base: "lg", md: "xl" }}
+      fontSize={feature ? { base: "xl", lg: "3xl" } : { base: "xl", lg: "xl" }}
       {...rest}
     >
       {children}
@@ -211,6 +224,7 @@ export function CardHeading({ feature = false, mb, children, ...rest }) {
 
 export function SectionHead({
   title,
+  titleId,
   intro,
   onDark,
   align = "flex-start",
@@ -227,6 +241,7 @@ export function SectionHead({
     >
       <Heading
         as="h2"
+        id={titleId}
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         color={onDark ? "white" : "ink"}
       >
@@ -235,7 +250,7 @@ export function SectionHead({
       {intro && (
         <Text
           fontSize={{ base: "md", md: "lg" }}
-          color={onDark ? "whiteAlpha.900" : "muted"}
+          color={onDark ? "white" : "muted"}
           lineHeight={1.7}
         >
           {intro}
@@ -273,7 +288,7 @@ export function GrammarTile({ tile }) {
       >
         <AspectRatio ratio={1}>
           <img
-            src={`https://static.arasaac.org/pictograms/${tile.pic}/${tile.pic}_500.png`}
+            src={`${import.meta.env.BASE_URL}assets/pictograms/${tile.pic}.png`}
             alt=""
             aria-hidden="true"
             loading="lazy"
@@ -289,11 +304,18 @@ export function GrammarTile({ tile }) {
 }
 
 export function BoardFrame({ eager }) {
-  const { lang, c, cfg } = useLang();
-  const file = lang === "ru" ? cfg.mockupRU : cfg.mockupEN;
-  const src = import.meta.env.BASE_URL + file;
+  const { lang, c } = useLang();
+  const img =
+    import.meta.env.BASE_URL +
+    (lang === "ru"
+      ? "assets/board-preview-ru.png"
+      : "assets/board-preview-en.png");
+  const descId = useId();
   return (
     <Box
+      role="img"
+      aria-label={c.a11y.boardPreviewLabel}
+      aria-describedby={descId}
       position="relative"
       w="100%"
       bg={INK}
@@ -303,6 +325,10 @@ export function BoardFrame({ eager }) {
       borderColor="#26282C"
       boxShadow="0 2px 0 rgba(255,255,255,0.06) inset, 0 20px 40px -26px rgba(11,13,16,0.42)"
     >
+      {/* full description for screen readers*/}
+      <Text as="span" id={descId} className="sr-only">
+        {c.a11y.boardPreviewAlt}
+      </Text>
       {/* front camera */}
       <Box
         aria-hidden="true"
@@ -322,15 +348,11 @@ export function BoardFrame({ eager }) {
         overflow="hidden"
         bg="paper.50"
       >
-        <iframe
-          src={src}
+        <img
+          src={img}
+          alt=""
           loading={eager ? "eager" : "lazy"}
-          title={
-            lang === "ru"
-              ? "Интерактивный предпросмотр доски"
-              : "Interactive board preview"
-          }
-          style={{ border: 0, width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </AspectRatio>
     </Box>
