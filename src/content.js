@@ -5,8 +5,8 @@
 export const MV_CONFIG = {
   githubUrl:   'https://github.com/Xentention/my-voice-info',
   demoUrl:     '#',                                                
-  surveyUrlEN:   'https://forms.gle/KffYTdSY7yLiJ4Uu5',
-  surveyUrlRU:   'https://forms.gle/KkgMjyqgsL5AYK8GA',
+  surveyUrlRU:   'https://forms.gle/KffYTdSY7yLiJ4Uu5',
+  surveyUrlEN:   'https://forms.gle/KkgMjyqgsL5AYK8GA',
   email:       'xvtimoshenko@gmail.com',
   siteOrigin:  'https://Xentention.github.io/my-voice-info',
   windowsAppUrl: 'https://github.com/Xentention/windows-grammarcheck-service',
