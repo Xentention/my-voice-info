@@ -8,6 +8,7 @@ import {
   Text,
   Link,
   AspectRatio,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useLang } from "../LangContext";
 
@@ -96,6 +97,7 @@ export function CardRail({
   const railRef = useRef(null);
   const [active, setActive] = useState(0);
   const count = Children.count(children);
+  const isScrollable = useBreakpointValue({ base: true, [gridFrom]: false });
 
   function onScroll() {
     const el = railRef.current;
@@ -129,6 +131,10 @@ export function CardRail({
       <Box
         ref={railRef}
         onScroll={onScroll}
+        tabIndex={isScrollable ? 0 : undefined}
+        role={isScrollable ? "group" : undefined}
+        aria-roledescription={isScrollable ? "carousel" : undefined}
+        aria-label={isScrollable ? c.a11y.cardRailLabel : undefined}
         display={{ base: "flex", [gridFrom]: "grid" }}
         overflowX={{ base: "auto", [gridFrom]: "visible" }}
         gridTemplateColumns={gridTemplateColumns}

@@ -53,6 +53,7 @@ export const MV_CONTENT = {
         'home, search, emergency board, return, alert/attention bell, keyboard, and a whiteboard.\n' +
         'Above them is a status area showing battery level and the current time and date.',
       goToCard:       'Go to card',
+      cardRailLabel:  'Scrollable card list',
     },
 
     meta: {
@@ -235,6 +236,7 @@ export const MV_CONTENT = {
         'и доска для рисования.\n' +
         'Над ними расположены элементы, показывающие уровень заряда батареи и текущее время и дату.',
       goToCard:       'Перейти к карточке',
+      cardRailLabel:  'Список карточек с прокруткой',
     },
 
     meta: {
