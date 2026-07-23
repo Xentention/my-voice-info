@@ -6,7 +6,7 @@
   </a>
 </p>
 
-- [Читать на русском](README.md)
+- [Читать на русском](README.ru.md)
 - [Architecture](architecture.md)
 
 My Voice is a free communication app for people who find spoken language difficult.
