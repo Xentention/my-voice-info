@@ -24,7 +24,7 @@ export function Footer() {
     <Box
       as="footer"
       id="contact"
-      className="mv-hc-surface"
+      className="mv-hc-footer"
       bg="ink"
       color="paper.100"
       pt={{ base: 16, md: 20 }}
@@ -42,7 +42,7 @@ export function Footer() {
               <Logo size="40px" />
               <Heading
                 as="h2"
-                fontSize={{ base: "2xl", md: "3xl" }}
+                fontSize={{ base: "xl", md: "2xl" }}
                 color="white"
               >
                 {f.title}

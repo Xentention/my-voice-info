@@ -248,7 +248,7 @@ export function SectionHead({
       <Heading
         as="h2"
         id={titleId}
-        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
         color={onDark ? "white" : "ink"}
       >
         {title}

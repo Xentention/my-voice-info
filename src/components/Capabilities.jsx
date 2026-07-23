@@ -36,7 +36,12 @@ export function Capabilities() {
       <CardHeading feature mb={{ base: 2.5, md: 3.5 }}>
         {feature.title}
       </CardHeading>
-      <Text color="muted" lineHeight={1.7} fontSize="lg" mb={6}>
+      <Text
+        color="muted"
+        lineHeight={1.7}
+        fontSize={{ base: "inherit", lg: "lg" }}
+        mb={6}
+      >
         {feature.body}
       </Text>
       <Box flex={1} minH={2} />

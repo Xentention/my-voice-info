@@ -23,9 +23,12 @@ html[data-hc="on"] #root {
   background: var(--hc-bg) !important;
 }
 
-html[data-hc="on"],
 html[data-hc="on"] body {
   overflow-x: hidden !important;
+  overflow-wrap: break-word !important;
+}
+
+html[data-hc="on"] {
   overflow-wrap: break-word !important;
 }
 
@@ -37,10 +40,26 @@ html[data-hc="on"] #root :where(*):not(svg):not(svg *) {
   text-shadow: none !important;
 }
 
+
 /* Dark colors invert to white */
-html[data-hc="on"] .mv-hc-surface {
-  background: var(--hc-bg) !important;
+html[data-hc="on"] .mv-hc-footer {
   border-color: var(--hc-fg) !important;
+  border-top: 3px solid var(--hc-fg) !important;
+  background: var(--hc-bg) !important;
+}
+
+html[data-hc="on"] .mv-hc-footer span {
+  color: white !important;
+}
+
+html[data-hc="on"] .mv-hc-surface {
+  background: var(--hc-fg) !important;
+  border-color: var(--hc-bg) !important;
+}
+
+html[data-hc="on"] #root header.mv-hc-surface,
+html[data-hc="on"] #root header.mv-hc-surface * {
+  color:  var(--hc-bg) !important;
 }
 
 html[data-hc="on"] .mv-hc-card,
@@ -73,16 +92,53 @@ html[data-hc="on"] #root .chakra-button svg {
   color: var(--hc-fg) !important;
 }
 
-html[data-hc="on"] #root .mv-hc-mark {
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button {
+  background: transparent !important;
+  border: none !important;
+}
+@media (min-width: 62em) {
+  html[data-hc="on"] #root header.mv-hc-surface .chakra-button {
+    border: 2px solid var(--hc-bg) !important;
+  }
+}
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button,
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button svg {
+  color: var(--hc-bg) !important;
+}
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button:hover,
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button:focus-visible {
+  background: var(--hc-bg) !important;
+}
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button:hover,
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button:hover *,
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button:focus-visible,
+html[data-hc="on"] #root header.mv-hc-surface .chakra-button:focus-visible * {
+  color: var(--hc-fg) !important;
+}
+
+html[data-hc="on"] #root header.mv-hc-surface a:not(.chakra-button):not([href="#main"]):hover,
+html[data-hc="on"] #root header.mv-hc-surface a:not(.chakra-button):not([href="#main"]):focus-visible {
+  background: var(--hc-bg) !important;
+}
+html[data-hc="on"] #root header.mv-hc-surface a:not(.chakra-button):not([href="#main"]):hover,
+html[data-hc="on"] #root header.mv-hc-surface a:not(.chakra-button):not([href="#main"]):hover *,
+html[data-hc="on"] #root header.mv-hc-surface a:not(.chakra-button):not([href="#main"]):focus-visible,
+html[data-hc="on"] #root header.mv-hc-surface a:not(.chakra-button):not([href="#main"]):focus-visible * {
+  color: var(--hc-fg) !important;
+}
+
+html[data-hc="on"] #root header.mv-hc-surface nav a {
+  border: 2px solid var(--hc-bg) !important;
+}
+
+html[data-hc="on"] #root button .mv-hc-mark {
   background: var(--hc-fg) !important;
 }
-html[data-hc="on"] #root .mv-hc-mark,
-html[data-hc="on"] #root .mv-hc-mark * {
+html[data-hc="on"] #root button .mv-hc-mark,
+html[data-hc="on"] #root button .mv-hc-mark * {
   color: var(--hc-bg) !important;
 }
 
-/* Underline links for non-colour distinction, but not button-styled links. */
-html[data-hc="on"] a:not(.chakra-button) { text-decoration: underline !important; }
 
 html[data-hc="on"] :focus-visible {
   outline: 3px solid var(--hc-fg) !important;

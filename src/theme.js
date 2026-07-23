@@ -3,7 +3,7 @@ import { extendTheme } from '@chakra-ui/react';
 const theme = extendTheme({
   config: { initialColorMode: 'light', useSystemColorMode: false },
   fonts: {
-    heading: "'Montserrat', system-ui, -apple-system, sans-serif",
+    heading: "'Unbounded', system-ui, -apple-system, sans-serif",
     body:    "'Open Sans', system-ui, -apple-system, sans-serif",
   },
   colors: {
