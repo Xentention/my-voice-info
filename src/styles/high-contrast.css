@@ -23,6 +23,12 @@ html[data-hc="on"] #root {
   background: var(--hc-bg) !important;
 }
 
+html[data-hc="on"],
+html[data-hc="on"] body {
+  overflow-x: hidden !important;
+  overflow-wrap: break-word !important;
+}
+
 /* setting borders and text to black */
 html[data-hc="on"] #root :where(*):not(svg):not(svg *) {
   color: var(--hc-fg) !important;
@@ -63,8 +69,10 @@ html[data-hc="on"] #root .chakra-button:focus-visible * {
   color: var(--hc-bg) !important;
 }
 
-/* Brand mark: invert to a black square with a white icon (the force rule above
-   blacks the glyph but leaves the red background, which would read ~2:1). */
+html[data-hc="on"] #root .chakra-button svg {
+  color: var(--hc-fg) !important;
+}
+
 html[data-hc="on"] #root .mv-hc-mark {
   background: var(--hc-fg) !important;
 }
@@ -79,4 +87,20 @@ html[data-hc="on"] a:not(.chakra-button) { text-decoration: underline !important
 html[data-hc="on"] :focus-visible {
   outline: 3px solid var(--hc-fg) !important;
   outline-offset: 2px;
+}
+
+html[data-hc="on"] {
+  font-family: 'Andika', system-ui, -apple-system, sans-serif !important;
+  font-weight: 600;
+}
+html[data-hc="on"] * {
+  font-family: 'Andika', system-ui, -apple-system, sans-serif !important;
+}
+
+html[data-hc="on"] .mv-material-symbol {
+  font-family: 'Material Symbols Rounded' !important;
+}
+
+html[data-hc="on"] :where(.div):is(.chakra-container) {
+  font-size: 1.1em !important;
 }

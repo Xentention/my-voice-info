@@ -10,8 +10,9 @@ export function InflectionExample({ g, ...rest }) {
       muted
       feature
       h={{ base: "auto", lg: "auto" }}
-      w={{ base: "auto", lg: "auto" }}
-      ml={{ base: "7%", lg: 0 }}
+      w={{ base: "92%", lg: "auto" }}
+      ml={{ base: "4%", lg: 0 }}
+      justifyContent="center"
       {...rest}
     >
       <VStack spacing={4} align="stretch">

@@ -16,6 +16,7 @@ import {
   MaterialIcons,
   FlagIcon,
   ContrastIcon,
+  FormIcon,
 } from "./icons";
 
 export function Header() {
@@ -129,35 +130,37 @@ export function Header() {
             >
               <FlagIcon code={c.nav.langFlag} size={32} />
             </Link>
-            <Link
-              href={cfg.githubUrl}
-              isExternal
-              aria-label={c.nav.githubLabel}
-              display="inline-flex"
-              alignItems="center"
-              justifyContent="center"
-              w="44px"
-              h="44px"
-              borderRadius="full"
-              color="white"
-              flexShrink={0}
-            >
-              <MaterialIcons name="github" fontSize={40} />
-            </Link>
+
             <Button
               as={Link}
               gap={2}
-              href={`mailto:${cfg.email}`}
+              href={resolveHref(c.hero.ctaPrimary.href, cfg)}
               size="sm"
               variant="solid"
-              w="150px"
+              borderRadius={{ base: "full", lg: "lg" }}
+              w={{ base: "44px", lg: "200px" }}
               h="44px"
-              display={{ base: "none", sm: "inline-flex" }}
+              display="inline-flex"
+              bg={{ base: "transparent", lg: "brand.500" }}
+              justifyContent="center"
             >
-              {<MaterialIcons name="email" color="white" fontSize={20} />}
               {
-                <Text color="white" maxW="md" lineHeight={1.6}>
-                  {c.nav.emailLabel}
+                <FormIcon
+                  color="white"
+                  size={{ base: "37px", lg: 25 }}
+                  flexShrink={0}
+                  aria-hidden="true"
+                />
+              }
+              {
+                <Text
+                  color="white"
+                  maxW="md"
+                  fontSize="sm"
+                  lineHeight={1.6}
+                  display={{ base: "none", lg: "inline" }}
+                >
+                  {c.research.cta.label}
                 </Text>
               }
             </Button>
