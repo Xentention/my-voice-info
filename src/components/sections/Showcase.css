@@ -1,0 +1,165 @@
+.dev-switch {
+  display: none;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.js .dev-switch {
+  display: flex;
+}
+
+.car {
+  margin-top: 8px;
+}
+
+.car-view {
+  display: flex;
+  margin-top: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  border-radius: var(--r-box);
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 28px;
+  align-items: center;
+  padding: 22px;
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-line);
+  border-radius: var(--r-box);
+}
+
+.car[data-device="tablet"] .s-p,
+.car[data-device="phone"] .s-t {
+  display: none;
+}
+
+.car[data-device="phone"] .slide {
+  grid-template-columns: minmax(0, 250px) minmax(0, 1fr);
+  justify-content: center;
+  gap: 40px;
+}
+
+.shot {
+  background: var(--bezel);
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.shot.s-p {
+  border-radius: 24px;
+  padding: 7px;
+}
+
+.shot img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.shot.s-p img {
+  border-radius: 18px;
+}
+
+.slide h3 {
+  font-size: 1.4rem;
+  color: var(--app-accent);
+}
+
+.slide .ticks {
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.car-ctl {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.js .car-ctl {
+  display: flex;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--ctl-h);
+  min-width: 9.5rem;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border: var(--bw) solid var(--app-accent);
+  border-radius: var(--r-ctl);
+  background: var(--app-accent);
+  color: var(--app-text-reverse);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.btn:hover:not([disabled]) {
+  background: color-mix(in srgb, var(--app-accent) 82%, var(--app-text-strong));
+}
+
+.btn:active:not([disabled]) {
+  background: color-mix(in srgb, var(--app-accent) 70%, var(--app-text-strong));
+}
+
+.dots {
+  display: flex;
+}
+
+.dots button {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dots button::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: var(--bw) solid var(--app-accent);
+  border-radius: 50%;
+}
+
+.dots button[aria-checked="true"]::before {
+  background: var(--app-accent);
+}
+
+@media (max-width: 760px) {
+  .car-prev,
+  .car-next {
+    display: none;
+  }
+
+  .slide,
+  .car[data-device="phone"] .slide {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .car[data-device="phone"] .shot.s-p {
+    width: min(100%, 250px);
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,96 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 40px;
+  align-items: center;
+  padding-block: 28px 56px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.4vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.hero h1:lang(ru) {
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+}
+
+.eta {
+  margin-top: 6px;
+  font-size: 1.05rem;
+}
+
+.lead {
+  margin-top: 14px;
+  max-width: 28ch;
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.devices {
+  position: relative;
+  padding-bottom: 6%;
+}
+
+.tablet {
+  background: var(--bezel);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: var(--shadow-lift);
+}
+
+.tablet img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.phone {
+  position: absolute;
+  left: -4%;
+  bottom: 0;
+  width: 27%;
+  background: var(--bezel);
+  border-radius: 22px;
+  padding: 7px;
+  box-shadow: var(--shadow-lift);
+}
+
+.phone img {
+  border-radius: 16px;
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-bottom: 40px;
+  }
+
+  .phone {
+    left: 0;
+    width: 30%;
+  }
+
+  .devices {
+    margin-left: 6px;
+  }
+}
+
+.more-ways {
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.more-ways a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.more-ways a:hover {
+  text-decoration-thickness: 2px;
+}

@@ -1,0 +1,91 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px 16px;
+  flex-wrap: wrap;
+  padding-block: 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-right: auto;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.logo rect {
+  fill: var(--app-logo);
+}
+
+.logo path {
+  fill: var(--app-logo-contrast);
+}
+
+.nav {
+  display: flex;
+  flex: 0 1 auto;
+  min-width: 0;
+  justify-content: flex-end;
+  gap: 0 16px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.nav a {
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ctl-h);
+  height: var(--ctl-h);
+  border-radius: var(--r-ctl);
+}
+
+.lang:hover {
+  background: var(--hover);
+}
+
+.lang:active {
+  background: var(--press);
+}
+
+.lang img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    display: none;
+  }
+
+  .tools {
+    margin-left: auto;
+  }
+}

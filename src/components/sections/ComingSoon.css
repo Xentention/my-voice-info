@@ -1,0 +1,13 @@
+.card.soon {
+  border: var(--bw) dashed var(--app-line-strong);
+}
+
+.card.soon h3 {
+  color: var(--app-text-strong);
+}
+
+.card.soon p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+

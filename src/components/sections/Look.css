@@ -1,0 +1,112 @@
+h3.sh {
+  margin-top: 44px;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.styles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.styles .frame {
+  background: var(--app-surface);
+  border: 1px solid var(--app-line);
+  border-radius: var(--r-box);
+  overflow: hidden;
+}
+
+.styles .frame img {
+  width: 100%;
+}
+
+.styles figcaption {
+  display: grid;
+  gap: 2px;
+  margin-top: 12px;
+}
+
+.styles figcaption span {
+  color: var(--app-text-muted);
+  font-size: 16px;
+}
+
+.themes {
+  position: relative;
+  aspect-ratio: 1280 / 800;
+  max-width: 980px;
+  margin: 24px auto 0;
+}
+
+.themes .back {
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.themes .band {
+  position: absolute;
+  inset: 0;
+}
+
+.themes .l {
+  background: var(--showcase-light);
+  clip-path: polygon(0 0, 43.3% 0, 23.3% 100%, 0 100%);
+}
+
+.themes .w {
+  background: var(--showcase-warm);
+  clip-path: polygon(43.3% 0, 76.6% 0, 56.6% 100%, 23.3% 100%);
+}
+
+.themes .d {
+  background: var(--showcase-dark);
+  clip-path: polygon(76.6% 0, 100% 0, 100% 100%, 56.6% 100%);
+}
+
+.themes .win {
+  position: absolute;
+  inset: 5% 4%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bezel);
+  box-shadow: var(--shadow-lift);
+}
+
+.themes .win img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.themes .win .l-img {
+  clip-path: polygon(0 0, 44% 0, 24% 100%, 0 100%);
+}
+
+.themes .win .w-img {
+  clip-path: polygon(44% 0, 77% 0, 57% 100%, 24% 100%);
+}
+
+.themes .win .d-img {
+  clip-path: polygon(77% 0, 100% 0, 100% 100%, 57% 100%);
+}
+
+.cap-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .styles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
