@@ -1,107 +1,43 @@
-# About My Voice
+# My Voice
 
-<p align="center">
-  <a href="https://Xentention.github.io/my-voice-info/">
-<img alt="My Voice Website" src="https://img.shields.io/badge/My_Voice-landing?style=for-the-badge&label=Visit%20Our%20Website&labelColor=%23FFFFFF&color=920000">
-  </a>
-</p>
+A free, easy-to-use communication app designed for people who find speaking difficult.
 
-- [Читать на русском](README.ru.md)
-- [Architecture](architecture.md)
+My Voice is an app for augmentative and alternative communication (AAC). It runs on Android 9 and later, on phones and tablets. The app is in beta, and release is expected in 2027.
 
-My Voice is a free communication app for people who find spoken language difficult.
-It works the way many other AAC apps work — select tiles, build a sentence,
-let the device voice it -- with a few things that set it apart.
+[Website](https://Xentention.github.io/my-voice-info/) · [Читать на русском](README.ru.md)
 
-The main difference is being created with [fusional languages](https://en.wikipedia.org/wiki/Fusional_language) in mind,
-while staying agnostic to simplify adding new languages with their own grammar structures.
+## About the app
 
-Most AAC apps don't handle inflection well; they speak words as-is
-and leave the listener to fill in the gaps. This, aided by prefixes- and -suffixes, works fine for lightly-inflected languages like English, but others may have dozens of forms required for grammatical agreement. One example is OpenAAC specification supporting up to 9 grammar forms -- yet most Slavic languages can have around 50, all used in everyday speech!
+- My Voice will always stay free because we believe communication should be open to everyone.
+- My Voice does not collect or send any data. It always stays on your device. The app runs locally, so every feature is always available.
+- One engineer develops My Voice with help from speech-language pathologists and support from the AAC community.
 
-My Voice handles word agreement automatically, allowing more natural speech with less cognitive effort.
+## What My Voice can do
 
-And we build it the way assistive technology should be built:
-consulting AAC users and speech-language pathologists
-so the app is genuinely useful, not just well-intentioned.
+- **Books and boards.** Vocabulary is organised into books. A book is a set of boards, each holding tiles with words and phrases. A board spans from 1 × 1 to 15 × 15 tiles. Switch between books at any time.
+- **Messages.** Add word and phrase tiles to a message or speak them aloud immediately. You can also type on your device’s keyboard or use a letterboard. The message bar can show the selected tiles as well as text.
+- **Tiles that do more.** Folders open other boards, and popups offer a choice of tiles. Tiles can also add a suffix, prefix, letter or punctuation mark, return you to the home page, show the time, date or battery level, or change the volume.
+- **Quick phrases.** Use ready-made phrases from a separate page. They are available across the app and can be filtered by language.
+- **Additional actions.** Set a message aside while you write another one, show it in full screen, or use Find word to see the path to a tile.
 
-## Robust Vocabulary
+## Make it yours
 
-My Voice comes with an extensive vocabulary that covers general everyday topics,
-so you can start using it right away, and add new words when you need them.
+- **Appearance.** Choose from 16 colors and three themes (light, dark and warm). Adjust the font, text size, tile spacing and label position. Navigation tiles come in two styles, Minimal and Classic.
+- **Edit mode.** Move or hide tiles, change the board size and style each tile separately. Add photos from your gallery or camera, or upload your own audio instead of using speech synthesis.
+- **Voice.** My Voice uses the speech synthesizers already installed on your device. Adjust the speed, pitch and volume, and use a secondary voice to preview a tile before selecting it. Speech plays on the Accessibility audio stream, so silent mode and music do not mute it.
+- **Accessibility.** Select tiles on touch, on release, after a hold or by dwell time. Ignore repeated taps and navigate with taps or a keyboard. Choose which pages to hide behind the lock and add a PIN of up to 8 digits if you need one.
 
-## Concepts
+## Works with other AAC apps
 
-**Books** are the top-level entities. They define an isolated set of boards, serving
-as an independent vocabulary. It is possible to have several books on one device, and
-switching between them takes only a few taps.
+Import and export Open Board files (`.obf` and `.obz`) to move boards between My Voice and other AAC apps, such as Asterics AAC.
 
-**Boards** are the grids of buttons, carrying the vocabulary. Copying a board into another book is possible; it creates an independent copy of the board and all its tiles (the underlying concepts stay shared),
-staying on the middle ground between convenience and keeping data structure clean.
+Export boards as PDF or PNG for printing. Create a local backup of your books and settings as a `.myvoice` file and restore it on another device.
 
-**Tiles** are the buttons on a board. Each tile may carry 1-3 words, a quick-fire
-phrase, or a navigation step.
+## Coming soon
 
-There's a special kind of tile called a **chunk**: a 2- or 3-word unit that
-carries references to concepts. It allows creating shortcuts for frequently used
-collocations while still supporting inflection.
-
-**Phrases** are fixed tiles that always play the same audio.
-They're played immediately and never added to the utterance strip, plus
-they're the only type that can carry custom audio
-(A restriction made neccessary by the inflection complexity).
-
-**Folders** and **Popups** are navigation tiles.
-
-## Adding New Words
-
-Edit mode allows creating new concepts/words. To minimize mistakes, the user also needs to set its part of speech value (whether it's a verb, a noun, or something else). The app analyzes the newly added concept right on the device and generates the forms it'll need.
-
-Sometimes words need to stay locked to a single form.
-For those, you can disable inflection so it always bypasses the rule-based grammar stage.
-
-## Customization
-
-My Voice is highly customizable, letting users adjust colors, borders,
-text size, and more, globally or per-tile.
-
-In addition, My Voice supports flexible grid UI:
-
-- every board may contain any number of rows and columns from 1x1 all the way to 12x12;
-- every tile may be any size from 1x1 to 3x3, allowing advanced board configuration;
-- a tile is not needed for now? Edit mode allows hiding IT without deleting anything from the board.
-
-## Sharing with Other Apps
-
-My Voice reads and writes the Open Board Format (OBF) and Open Board
-Format Zip (OBZ) -- the standard files most modern AAC apps support.
-
-So, if you've built up custom boards here, you can export them as OBZ and use them elsewhere, and vice versa.
-The My-Voice-specific features (chunks, custom audio, grammar metadata)
-travel with the file as extensions that other apps quietly ignore --
-the boards still work, just without those extras.
-
-Joining this shared ecosystem matters to us, so users data is never trapped with a single provider.
-
-## Languages at Launch
-
-The first release supports two content languages: **English** and **Russian**.
-Adding more languages is a known pathway: translation, board
-adaptation, and morphology data for languages that need it.
-
-## How to Get Involved
-
-The app is still in development, with the first release expected around 2027.
-
-### Want to Help?
-
-**Fill out the survey.**
-
-About twelve minutes, anonymous, and the
-answers directly shape what gets prioritized — your
-perspective matters.
-
-**Join the beta list.**
-
-When the first testing builds are ready,
-you will receive a closed beta invite.
+- **Grammar.** Support for inflections, even in languages with dozens of word forms. We’ll open the source code when the grammar module is ready.
+- **Cloud sync.** Automatic backup and cloud sync through a cloud drive.
+- **Fixed grid mode.** A separate mode for easier use with a physical keyguard or scanning.
+- **Switch scanning.** Navigate with one or two switches, on the screen or connected by USB.
+- **Pictogram library.** Search an online symbol library, such as Global Symbols, from inside the app.
+- **Different tile sizes.** A tile can cover more than one cell, up to 3 × 3.

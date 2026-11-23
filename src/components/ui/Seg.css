@@ -1,0 +1,72 @@
+.seg {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  color: var(--app-accent);
+  border: var(--bw) solid currentColor;
+  border-radius: var(--r-ctl);
+}
+
+.seg button:first-child {
+  border-radius: calc(var(--r-ctl) - var(--bw)) 0 0 calc(var(--r-ctl) - var(--bw));
+}
+
+.seg button:last-child {
+  border-radius: 0 calc(var(--r-ctl) - var(--bw)) calc(var(--r-ctl) - var(--bw)) 0;
+}
+
+.seg button:focus-visible {
+  position: relative;
+  z-index: 1;
+}
+
+.seg button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: calc(var(--ctl-h) - 2 * var(--bw));
+  padding: 0 16px;
+  font-size: 16px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.seg button + button {
+  border-left: var(--bw) solid currentColor;
+}
+
+.seg button svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.seg button:not(:has(> :not(svg))) {
+  padding: 0 11px;
+}
+
+.band-accent .seg {
+  color: var(--app-text-reverse);
+}
+
+.band-accent .seg button[aria-pressed="true"] {
+  background: var(--app-text-reverse);
+  color: var(--app-accent);
+}
+
+.seg button:hover:not([aria-pressed="true"]) {
+  background: var(--hover);
+}
+
+.seg button:active:not([aria-pressed="true"]) {
+  background: var(--press);
+}
+
+.seg button[aria-pressed="true"] {
+  background: var(--app-accent);
+  color: var(--app-text-reverse);
+  font-weight: 700;
+}

@@ -1,0 +1,82 @@
+:root,
+:root[data-theme="light"] {
+  --app-surface-sunken: #eef0f3;
+  --app-surface: #f2f3f5;
+  --app-surface-raised: #ffffff;
+  --app-line: #d5d9de;
+  --app-line-strong: #8a8a8a;
+  --app-text-muted: #5f6670;
+  --app-text-strong: #1c1f23;
+  --app-text-reverse: #ffffff;
+  --app-accent: #1b548f;
+  --app-focus: #226ab2;
+  --app-logo: #DC0000;
+  --app-logo-contrast: #ffffff;
+  --bezel: #111214;
+  --store-bg: #000000;
+  --store-fg: #ffffff;
+  --shadow-lift: 0 16px 32px -18px rgba(0, 0, 0, 0.55);
+  --showcase-light: #f2f3f5;
+  --showcase-warm: #ede8d0;
+  --showcase-dark: #2b2c31;
+  --font: "Open Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Unbounded", "Open Sans", "Segoe UI", system-ui, sans-serif;
+  --w: 1120px;
+  --ctl-h: 48px;
+  --cta-h: 56px;
+  --r-ctl: 10px;
+  --r-box: 12px;
+  --bw: 2px;
+  --dur: 150ms;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --app-surface-sunken: #2b2c31;
+    --app-surface: #2b2c31;
+    --app-surface-raised: #3c3e45;
+    --app-line: #4f5159;
+    --app-line-strong: #8a8c94;
+    --app-text-muted: #c4c5ca;
+    --app-text-strong: #f1f1f3;
+    --app-text-reverse: #111214;
+    --app-accent: #a9cbf3;
+    --app-focus: #6fa8e8;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --app-surface-sunken: #2b2c31;
+  --app-surface: #2b2c31;
+  --app-surface-raised: #3c3e45;
+  --app-line: #4f5159;
+  --app-line-strong: #8a8c94;
+  --app-text-muted: #c4c5ca;
+  --app-text-strong: #f1f1f3;
+  --app-text-reverse: #111214;
+  --app-accent: #a9cbf3;
+  --app-focus: #6fa8e8;
+  color-scheme: dark;
+}
+
+:root[data-theme="warm"] {
+  --app-surface-sunken: #ede8d0;
+  --app-surface: #ede8d0;
+  --app-surface-raised: #fbf9ef;
+  --app-line: #d9d4ba;
+  --app-line-strong: #848484;
+  --app-text-muted: #565b52;
+  --app-text-strong: #1c1f23;
+  --app-text-reverse: #ffffff;
+  --app-accent: #1b548f;
+  --app-focus: #226ab2;
+  color-scheme: light;
+}
+
+:root {
+  --hover: color-mix(in srgb, currentColor 14%, transparent);
+  --press: color-mix(in srgb, currentColor 24%, transparent);
+  --row-hover: color-mix(in srgb, var(--app-accent) 10%, var(--app-surface-raised));
+}

@@ -1,0 +1,51 @@
+.get {
+  text-align: center;
+  padding-block: 56px;
+}
+
+.get h2 {
+  font-size: 2rem;
+}
+
+.get .slots {
+  margin-inline: auto;
+}
+
+.get p.sm {
+  margin-top: 14px;
+}
+
+.get p.sm a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--ctl-h);
+  padding: 0 8px;
+}
+
+.get .stores {
+  max-width: 560px;
+  margin: 36px auto 0;
+  text-align: left;
+}
+
+.get .stores h3 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.get .stores .row {
+  color: var(--app-text-strong);
+}
+
+.get .stores .rows {
+  margin: 0 auto;
+}
+
+.get p.sm .off {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--ctl-h);
+  padding: 0 8px;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.name {
+  white-space: nowrap;
+}
+
+.beta {
+  font-family: var(--font);
+  font-size: 0.65em;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+}

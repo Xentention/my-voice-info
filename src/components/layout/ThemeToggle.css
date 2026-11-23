@@ -1,0 +1,106 @@
+.theme {
+  position: relative;
+}
+
+.drop {
+  display: none;
+  position: relative;
+}
+
+.drop-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ctl-h);
+  height: var(--ctl-h);
+  padding: 0;
+  color: var(--app-text-reverse);
+  background: transparent;
+  border: var(--bw) solid currentColor;
+  border-radius: var(--r-ctl);
+  cursor: pointer;
+}
+
+.drop-btn svg:first-child {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.drop-btn svg:last-child {
+  width: 18px;
+  height: 18px;
+  margin-left: -2px;
+  fill: currentColor;
+}
+
+.drop-btn:hover {
+  background: var(--hover);
+}
+
+.drop-btn:active,
+.drop-btn[aria-expanded="true"] {
+  background: var(--press);
+}
+
+.drop-list {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  min-width: 180px;
+  padding: 6px;
+  color: var(--app-text-strong);
+  background: var(--app-surface-raised);
+  border: 1px solid var(--app-line);
+  border-radius: var(--r-box);
+  box-shadow: var(--shadow-lift);
+}
+
+.drop-list button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: var(--ctl-h);
+  padding: 0 14px;
+  font-size: 16px;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-radius: calc(var(--r-ctl) - 2px);
+  cursor: pointer;
+  transition: background-color var(--dur);
+}
+
+.drop-list button svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.drop-list button:hover:not([aria-pressed="true"]) {
+  background: var(--row-hover);
+}
+
+.drop-list button[aria-pressed="true"] {
+  background: var(--app-accent);
+  color: var(--app-text-reverse);
+  font-weight: 700;
+}
+
+.drop-list :focus-visible {
+  outline-color: var(--app-focus);
+  outline-offset: -3px;
+}
+
+@media (max-width: 560px) {
+  .theme .seg {
+    display: none;
+  }
+
+  .drop {
+    display: block;
+  }
+}

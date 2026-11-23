@@ -19,10 +19,24 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build          
+      - run: npm run build
+        env:
+          VITE_GOOGLE_PLAY_URL: ${{ vars.GOOGLE_PLAY_URL }}
+          VITE_IOS_INTEREST_URL_EN: ${{ vars.IOS_INTEREST_URL_EN }}
+          VITE_IOS_INTEREST_URL_RU: ${{ vars.IOS_INTEREST_URL_RU }}
+          VITE_STORE_FDROID_URL: ${{ vars.STORE_FDROID_URL }}
+          VITE_STORE_RUSTORE_URL: ${{ vars.STORE_RUSTORE_URL }}
+          VITE_STORE_APK_URL: ${{ vars.STORE_APK_URL }}
+          VITE_MANUAL_EN_URL: ${{ vars.MANUAL_EN_URL }}
+          VITE_MANUAL_EN_SIZE: ${{ vars.MANUAL_EN_SIZE }}
+          VITE_MANUAL_RU_URL: ${{ vars.MANUAL_RU_URL }}
+          VITE_MANUAL_RU_SIZE: ${{ vars.MANUAL_RU_SIZE }}
+          VITE_SURVEY_URL_EN: ${{ vars.SURVEY_URL_EN }}
+          VITE_SURVEY_URL_RU: ${{ vars.SURVEY_URL_RU }}
+          VITE_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
