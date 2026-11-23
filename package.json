@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/build/prerender.mjs",
+    "test": "vitest run",
+    "test.built": "vitest run --config vitest.built.config.js",
+    "audit": "node scripts/audit/run.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

@@ -1,47 +1,43 @@
 # My Voice
 
-A free, private communication app for people who find speaking difficult. Choose tiles, build a message, and your device says it aloud.
+A free, easy-to-use communication app designed for people who find speaking difficult.
 
-My Voice is an AAC (augmentative and alternative communication) app for Android 9 and later. It is in beta, and the first release is expected in 2027.
+My Voice is an app for augmentative and alternative communication (AAC). It runs on Android 9 and later, on phones and tablets. The app is in beta, and release is expected in 2027.
 
 [Website](https://Xentention.github.io/my-voice-info/) · [Читать на русском](README.ru.md)
 
-## Principles
+## About the app
 
-- **Free.** My Voice will always stay free, because communication should be open to everyone.
-- **Private.** All data stays on your device. My Voice does not collect or send any information, and every feature works locally.
-- **Made for inflected languages.** Some languages have dozens of word forms. My Voice is designed around them and is not tied to one grammar, so new languages can be added.
-- **Built with its users.** We work with AAC users and speech-language pathologists.
+- My Voice will always stay free because we believe communication should be open to everyone.
+- My Voice does not collect or send any data. It always stays on your device. The app runs locally, so every feature is always available.
+- One engineer develops My Voice with help from speech-language pathologists and support from the AAC community.
 
-## How it works
+## What My Voice can do
 
-- **Books** are independent sets of boards, each with its own vocabulary. Keep several on one device and switch between them at any time.
-- **Boards** are grids of tiles, from 1×1 to 15×15.
-- **Tiles** are the cells on a board. A tile can be:
-  - a word or a phrase, which goes into the message bar or is spoken at once;
-  - a folder, which opens another board;
-  - a popup, which opens a choice of options in place;
-  - an action: a suffix or a prefix, a letter, a punctuation mark, a return to the home page, the time, the date, the battery level or a volume control. TBU
-- **Quick phrases** are catalogues of ready-made phrases on a separate page. They are available in every book and sorted by the languages you choose.
+- **Books and boards.** Vocabulary is organised into books. A book is a set of boards, each holding tiles with words and phrases. A board spans from 1 × 1 to 15 × 15 tiles. Switch between books at any time.
+- **Messages.** Add word and phrase tiles to a message or speak them aloud immediately. You can also type on your device’s keyboard or use a letterboard. The message bar can show the selected tiles as well as text.
+- **Tiles that do more.** Folders open other boards, and popups offer a choice of tiles. Tiles can also add a suffix, prefix, letter or punctuation mark, return you to the home page, show the time, date or battery level, or change the volume.
+- **Quick phrases.** Use ready-made phrases from a separate page. They are available across the app and can be filtered by language.
+- **Additional actions.** Set a message aside while you write another one, show it in full screen, or use Find word to see the path to a tile.
 
 ## Make it yours
 
-- **Appearance.** 16 colours, three themes (light, dark and warm), text size and font, tile spacing, label position, and two tile styles: Minimal and Classic.
-- **Tiles.** Add your own photos from the gallery or the camera, or your own audio instead of speech synthesis. Move and hide tiles, change the board size and style each tile separately.
-- **Voice.** My Voice uses the speech synthesizers already on your device, with adjustable speed, pitch and volume. A second voice can read a tile aloud as a preview before you choose it. Speech plays on the Accessibility audio stream, so silent mode and music do not mute it.
-- **Accessibility.** Select on touch, on release, after a hold or by dwell time, and ignore repeated taps. No complex gestures are needed. A lock can hide editing, Settings and other sections, with an optional PIN of up to 8 digits.
+- **Appearance.** Choose from 16 colors and three themes (light, dark and warm). Adjust the font, text size, tile spacing and label position. Navigation tiles come in two styles, Minimal and Classic.
+- **Edit mode.** Move or hide tiles, change the board size and style each tile separately. Add photos from your gallery or camera, or upload your own audio instead of using speech synthesis.
+- **Voice.** My Voice uses the speech synthesizers already installed on your device. Adjust the speed, pitch and volume, and use a secondary voice to preview a tile before selecting it. Speech plays on the Accessibility audio stream, so silent mode and music do not mute it.
+- **Accessibility.** Select tiles on touch, on release, after a hold or by dwell time. Ignore repeated taps and navigate with taps or a keyboard. Choose which pages to hide behind the lock and add a PIN of up to 8 digits if you need one.
 
-## Works with other apps
+## Works with other AAC apps
 
-My Voice reads and writes Open Board files (`.obf`, `.obz`), the format most AAC apps support, so boards move between My Voice and apps such as Asterics AAC.
+Import and export Open Board files (`.obf` and `.obz`) to move boards between My Voice and other AAC apps, such as Asterics AAC.
 
-Export boards as PDF or PNG for printing. Backup your settings as a `.myvoice` file to restore on another device.
+Export boards as PDF or PNG for printing. Create a local backup of your books and settings as a `.myvoice` file and restore it on another device.
 
 ## Coming soon
 
-- **Grammar.** Words agree with each other automatically in tense, gender, case and number. The source code will be opened when the module is ready.
-- **Cloud sync.** Automatic backup and sync through a cloud drive.
-- **Fixed grid mode.** Easier to use with a physical keyguard or with scanning.
-- **Switch scanning.** One or two switches, on the screen or connected by USB.
-- **Pictogram library.** Search an online symbol library such as Global Symbols from inside the app.
-- **Different tile sizes.** Tiles that cover more than one cell, up to 3×3.
+- **Grammar.** Support for inflections, even in languages with dozens of word forms. We’ll open the source code when the grammar module is ready.
+- **Cloud sync.** Automatic backup and cloud sync through a cloud drive.
+- **Fixed grid mode.** A separate mode for easier use with a physical keyguard or scanning.
+- **Switch scanning.** Navigate with one or two switches, on the screen or connected by USB.
+- **Pictogram library.** Search an online symbol library, such as Global Symbols, from inside the app.
+- **Different tile sizes.** A tile can cover more than one cell, up to 3 × 3.
