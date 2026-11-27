@@ -1,4 +1,6 @@
 import { useLang } from '../../app/LangContext';
+import { privacyPath } from '../../app/paths';
+import { PRIVACY_CONTENT } from '../../content/privacy';
 import './Footer.css';
 
 const Credit = ({ text, link }) => {
@@ -13,7 +15,7 @@ const Credit = ({ text, link }) => {
 };
 
 export default function Footer() {
-  const { c, cfg } = useLang();
+  const { c, cfg, lang } = useLang();
   return (
     <div className="wrap footer">
       <Credit {...c.footer.credit} />
@@ -25,6 +27,7 @@ export default function Footer() {
           <span aria-disabled="true">{c.footer.contactLabel}: {c.comingSoon.toLowerCase()}</span>
         )}
       </p>
+      <p><a href={`${import.meta.env.BASE_URL}${privacyPath(lang)}`}>{PRIVACY_CONTENT[lang].title}</a></p>
     </div>
   );
 }

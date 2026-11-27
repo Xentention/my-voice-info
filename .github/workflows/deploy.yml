@@ -37,8 +37,6 @@ jobs:
           VITE_MANUAL_EN_SIZE: ${{ vars.MANUAL_EN_SIZE }}
           VITE_MANUAL_RU_URL: ${{ vars.MANUAL_RU_URL }}
           VITE_MANUAL_RU_SIZE: ${{ vars.MANUAL_RU_SIZE }}
-          VITE_SURVEY_URL_EN: ${{ vars.SURVEY_URL_EN }}
-          VITE_SURVEY_URL_RU: ${{ vars.SURVEY_URL_RU }}
           VITE_CONTACT_EMAIL: ${{ vars.CONTACT_EMAIL }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

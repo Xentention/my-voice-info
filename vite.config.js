@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         en: resolve(__dirname, 'index.html'),
         ru: resolve(__dirname, 'ru/index.html'),
+        privacyEn: resolve(__dirname, 'privacy/index.html'),
+        privacyRu: resolve(__dirname, 'ru/privacy/index.html'),
       },
     },
   },

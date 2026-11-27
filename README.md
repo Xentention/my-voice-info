@@ -14,7 +14,7 @@ My Voice is an app for augmentative and alternative communication (AAC). It runs
 
 ## What My Voice can do
 
-- **Books and boards.** Vocabulary is organised into books. A book is a set of boards, each holding tiles with words and phrases. A board spans from 1 × 1 to 15 × 15 tiles. Switch between books at any time.
+- **Books and boards.** Vocabulary is organized into books. A book is a set of boards, each holding tiles with words and phrases. A board spans from 1 × 1 to 15 × 15 tiles. Switch between books at any time.
 - **Messages.** Add word and phrase tiles to a message or speak them aloud immediately. You can also type on your device’s keyboard or use a letterboard. The message bar can show the selected tiles as well as text.
 - **Tiles that do more.** Folders open other boards, and popups offer a choice of tiles. Tiles can also add a suffix, prefix, letter or punctuation mark, return you to the home page, show the time, date or battery level, or change the volume.
 - **Quick phrases.** Use ready-made phrases from a separate page. They are available across the app and can be filtered by language.

@@ -1,0 +1,13 @@
+.privacy {
+  max-width: min(var(--w), 74ch);
+  padding-block: clamp(32px, 6vw, 72px);
+  overflow-wrap: anywhere;
+}
+
+.privacy h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.privacy p {
+  margin-block-start: 0.85rem;
+}

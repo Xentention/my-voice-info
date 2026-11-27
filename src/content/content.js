@@ -6,8 +6,6 @@ export const MV_CONFIG = {
   googlePlayUrl: clean(env.VITE_GOOGLE_PLAY_URL),
   iosInterestUrlEN: clean(env.VITE_IOS_INTEREST_URL_EN),
   iosInterestUrlRU: clean(env.VITE_IOS_INTEREST_URL_RU),
-  surveyUrlEN: clean(env.VITE_SURVEY_URL_EN),
-  surveyUrlRU: clean(env.VITE_SURVEY_URL_RU),
   manuals: {
     en: manual(env.VITE_MANUAL_EN_URL, env.VITE_MANUAL_EN_SIZE),
     ru: manual(env.VITE_MANUAL_RU_URL, env.VITE_MANUAL_RU_SIZE),
@@ -58,12 +56,12 @@ export const MV_CONTENT = {
       cards: [
         { icon: 'volume_up', title: 'About the App', ticks: ['Runs on Android 9 and later', 'Will always stay free because we believe communication should be open to everyone', 'Intuitive interface and highly customizable to your needs'] },
         { icon: 'record_voice_over', title: 'Voice', ticks: ['Uses the speech synthesizers already installed on your device', 'Adjust speed, pitch and volume', 'Supports a secondary voice for audio previews'] },
-        { icon: 'lock', title: 'Privacy', ticks: ['My Voice does not collect or send any data. It always stays on your device', 'The app runs locally, so every feature is always available'] },
-        { icon: 'palette', title: 'Customisation', ticks: ['A palette of 16 colors, 3 color themes, and adjustable text size and font', 'Add your own photos from the gallery or the camera, or import archives', 'The message bar can show the selected tiles, not just text', 'Every option can be found in Settings or Edit mode'] },
+        { icon: 'lock', title: 'Privacy', ticks: ['Your books, boards and settings are stored on your device', 'The developer does not receive your communication content'] },
+        { icon: 'palette', title: 'Customization', ticks: ['A palette of 16 colors, 3 color themes, and adjustable text size and font', 'Add your own photos from the gallery or the camera, or import archives', 'The message bar can show the selected tiles, not just text', 'Every option can be found in Settings or Edit mode'] },
         { icon: 'touch_app', title: 'Accessibility settings', ticks: ['Several input modes: ignore repeated taps, select on touch, select on release', 'An audio preview is available; it allows you to hear what a tile says before selecting it', 'Protection against accidental actions', 'No complex gestures needed. My Voice is fully navigable by taps or keyboard'] },
         { icon: 'folder_zip', title: 'Works with other AAC apps', ticks: ['Imports and exports Open Board files (.obf, .obz), so you can use your boards in other apps, such as Asterics AAC', 'Export boards as PDF or PNG for printing', 'Create backups as .myvoice files and load them again. Cloud sync is coming later'] },
-        { icon: 'edit', title: 'Communication library', ticks: ['Vocabulary is organised into books. A book is a set of boards. Each board holds tiles with words and phrases', 'A board spans from 1 × 1 to 15 × 15 tiles', 'Switch between books at any time'] },
-        { icon: 'quickreply', title: 'Quick phrases', ticks: ['A separate page with catalogues of ready-made phrases', 'Available globally', 'Can be filtered by language'] },
+        { icon: 'edit', title: 'Communication library', ticks: ['Vocabulary is organized into books. A book is a set of boards. Each board holds tiles with words and phrases', 'A board spans from 1 × 1 to 15 × 15 tiles', 'Switch between books at any time'] },
+        { icon: 'quickreply', title: 'Quick phrases', ticks: ['A separate page with catalogs of ready-made phrases', 'Available globally', 'Can be filtered by language'] },
         { icon: 'widgets', title: 'Tiles that do more', ticks: ['Tiles can perform additional actions beyond just being your words', 'A tile can be a suffix, a prefix, a single letter, a punctuation mark, or another grammar element', 'It also can display the time, the date or the battery level, change the volume and more'] },
       ],
     },
@@ -88,7 +86,7 @@ export const MV_CONTENT = {
           alt: { tablet: 'The Find word dialog with the search help and matching tiles, each with its path.', phone: 'Find word on a phone with the search help and matching tiles.' } },
         { key: 'edit', title: 'Edit mode', ticks: ['Switch on Edit mode to change a board', 'Move and hide tiles, change the board size, and more', 'Tap any tile to open its menu'],
           alt: { tablet: 'A board in edit mode, with Move, Hide and Board size above it and Cancel and Done at the top.', phone: 'A phone board in edit mode, with Move, Hide and Board size above it.' } },
-        { key: 'editor', title: 'Edit a tile', ticks: ['Change its name and spoken text', 'Upload your own pictures', 'Choose the tile type, its behaviour and its look', 'Upload your own audio instead of speech synthesis'],
+        { key: 'editor', title: 'Edit a tile', ticks: ['Change its name and spoken text', 'Upload your own pictures', 'Choose the tile type, its behavior and its look', 'Upload your own audio instead of speech synthesis'],
           alt: { tablet: 'The tile editor, Main tab: name, alternative text, picture choices and kind.', phone: 'The tile editor on a phone, Main tab.' } },
         { key: 'colors', title: 'Tile styles', ticks: ['Style each tile separately', 'Choose one of 16 available colors or add your own', 'Change the border color and width, and the label position', 'Settings let you apply the same style to all tiles in the book'],
           alt: { tablet: 'The tile editor, Appearance tab: color, border, border width and label position.', phone: 'The tile editor on a phone, Appearance tab.' } },
@@ -160,7 +158,7 @@ export const MV_CONTENT = {
       items: [
         { q: 'What is My Voice?', a: 'My Voice is an app for augmentative and alternative communication (AAC). AAC covers all ways of communicating besides speech.' },
         { q: 'Who works on My Voice?', a: 'My Voice is developed by a single engineer (hi!) with the help of awesome SLPs and community support!' },
-        { q: 'Where does my data go?', a: 'My Voice does not collect or send your data. All information stays on your device.' },
+        { q: 'Where does my data go?', a: 'My Voice stores your saved content and settings on your device. See the Privacy Policy in the footer for details about network voices.' },
         { q: 'Can I bring boards from another app?', a: 'Yes, if the app can export Open Board files (.obf or .obz). You can export your boards from My Voice the same way.' },
         { q: 'Which devices does it run on?', a: 'Android phones and tablets come first. If you need a version for iOS or Windows, let us know.' },
         { q: 'Is the beta safe to rely on?', a: 'We work hard to make My Voice reliable, but it is still in its beta stage. Keep another way to communicate and back up your library.' },
@@ -170,12 +168,11 @@ export const MV_CONTENT = {
     get: {
       id: 'get',
       title: 'Try My Voice',
-      survey: 'Share your experience with My Voice',
       other: 'Download',
     },
     footer: {
       credit: {
-        text: 'The pictographic symbols used are the property of the Government of Aragón and were created by the ARASAAC team for the {link}, which distributes them under a Creative Commons licence (BY-NC-SA).',
+        text: 'The pictographic symbols used are the property of the Government of Aragón and were created by the ARASAAC team for the {link}, which distributes them under a Creative Commons license (BY-NC-SA).',
         link: { label: 'ARASAAC Open Classroom', href: 'https://aulaabierta.arasaac.org/' },
       },
       flags: {
@@ -222,7 +219,7 @@ export const MV_CONTENT = {
       cards: [
         { icon: 'volume_up', title: 'О приложении', ticks: ['Работает на Android 9 и новее', 'Всегда будет бесплатным, потому что мы верим, что общение должно быть доступно каждому', 'Понятный интерфейс и гибкая настройка под ваши потребности'] },
         { icon: 'record_voice_over', title: 'Голос', ticks: ['Работает с синтезаторами речи, уже установленными на устройстве', 'Настраивайте скорость, высоту и громкость голоса', 'Поддерживает дополнительный голос для предварительного озвучивания'] },
-        { icon: 'lock', title: 'Приватность', ticks: ['«Мой голос» не собирает и не передаёт данные. Они всегда остаются на вашем устройстве', 'Приложение работает локально, поэтому все функции доступны всегда'] },
+        { icon: 'lock', title: 'Приватность', ticks: ['Книги, доски и настройки хранятся на вашем устройстве', 'Разработчик не получает содержание ваших сообщений'] },
         { icon: 'palette', title: 'Настройка под себя', ticks: ['Палитра из 16 цветов, 3 цветовые темы, настраиваемые размер и шрифт текста', 'Добавляйте свои фотографии из галереи или с камеры либо импортируйте архивы', 'В строке сообщения можно показывать выбранные плитки вместе с текстом', 'Все параметры находятся в настройках или в режиме редактирования'] },
         { icon: 'touch_app', title: 'Настройки доступности', ticks: ['Несколько режимов ввода: игнорирование повторных касаний, выбор при нажатии, выбор при отпускании', 'Доступно предварительное озвучивание: оно позволяет услышать, что произносит плитка, до её выбора', 'Защита от случайных действий', 'Сложные жесты не нужны. По всему приложению «Мой голос» можно перемещаться касаниями или с помощью клавиатуры'] },
         { icon: 'folder_zip', title: 'Совместимость с другими приложениями АДК', ticks: ['Импорт и экспорт файлов Open Board (.obf, .obz): ваши доски можно использовать в других приложениях, например в Asterics AAC', 'Экспортируйте доски в PDF или PNG для печати', 'Создавайте резервные копии в формате .myvoice и восстанавливайте данные из них. Облачная синхронизация появится позже'] },
@@ -325,7 +322,7 @@ export const MV_CONTENT = {
       items: [
         { q: 'Что такое «Мой голос»?', a: 'Это приложение для альтернативной и дополнительной коммуникации (АДК). Так называют все способы общения, кроме обычной речи. Люди используют их, чтобы выразить желания, мысли, потребности и идеи.' },
         { q: 'Кто работает над «Мой голос»?', a: 'Над «Мой голос» работает один разработчик (привет!) при поддержке педагогов и других специалистов.' },
-        { q: 'Куда попадают мои данные?', a: '«Мой голос» не собирает и не передаёт ваши данные. Вся информация хранится только на устройстве.' },
+        { q: 'Куда попадают мои данные?', a: '«Мой голос» хранит сохранённые материалы и настройки на вашем устройстве. Подробнее об онлайн-синтезе речи рассказывает политика конфиденциальности. Ссылка на неё есть внизу страницы.' },
         { q: 'Можно ли перенести доски из другого приложения?', a: 'Да, если приложение поддерживает экспорт в Open Board (.obf или .obz). Свои доски из «Моего голоса» можно экспортировать так же.' },
         { q: 'На каких устройствах работает?', a: 'Сначала на телефонах и планшетах Android. Если вам нужна версия для iOS или Windows, напишите нам.' },
         { q: 'Можно ли полагаться на бету?', a: 'Мы стараемся сделать «Мой голос» надёжным, но это бета-версия. Держите под рукой альтернативы и чаще сохраняйте резервную копию.' },
@@ -335,7 +332,6 @@ export const MV_CONTENT = {
     get: {
       id: 'get',
       title: 'Попробуйте «Мой голос»',
-      survey: 'Расскажите о своём опыте с «Моим голосом»',
       other: 'Скачать',
     },
     footer: {
